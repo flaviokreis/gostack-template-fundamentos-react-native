@@ -30,9 +30,7 @@ const CartProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
     async function loadProducts(): Promise<void> {
-      const productsFromStorage = await AsyncStorage.getItem(
-        '@GoMarketplace:products',
-      );
+      const productsFromStorage = await AsyncStorage.getItem('productsInCart');
 
       if (productsFromStorage) {
         const list = JSON.parse(productsFromStorage);
@@ -43,88 +41,45 @@ const CartProvider: React.FC = ({ children }) => {
     loadProducts();
   }, []);
 
-  const findIndex = useCallback(
-    id => products.findIndex(product => product.id === id),
-    [products],
-  );
-
-  const saveProducts = useCallback(
-    async (list: Product[]) => {
-      setProducts(list);
-
-      await AsyncStorage.setItem(
-        '@GoMarketplace:products',
-        JSON.stringify(products),
-      );
-    },
-    [products],
-  );
-
   const addToCart = useCallback(
     async product => {
-      const productIndex = findIndex(product.id);
-      if (productIndex >= 0) {
-        const foundProduct = products[productIndex];
-
-        const productToSave = {
-          ...foundProduct,
-          quantity: foundProduct.quantity + 1,
-        };
-
-        const list = products;
-        list[productIndex] = productToSave;
-
-        saveProducts(list);
-      } else {
-        saveProducts([...products, { ...product, quantity: 1 }]);
+      const foundProduct = products.findIndex(item => item.id === product.id);
+      if (foundProduct === -1) {
+        setProducts([...products, { ...product, quantity: 1 }]);
+        await AsyncStorage.setItem('productsInCart', JSON.stringify(products));
       }
     },
-    [saveProducts, findIndex, products],
+    [products],
   );
 
   const increment = useCallback(
     async id => {
-      const productIndex = findIndex(id);
-      if (productIndex >= 0) {
-        const foundProduct = products[productIndex];
-
-        const productToSave = {
-          ...foundProduct,
-          quantity: foundProduct.quantity + 1,
-        };
-
-        const list = products;
-        list[productIndex] = productToSave;
-
-        saveProducts(list);
-      }
+      setProducts(
+        products.map(product =>
+          product.id === id
+            ? { ...product, quantity: product.quantity + 1 }
+            : product,
+        ),
+      );
+      await AsyncStorage.setItem('productsInCart', JSON.stringify(products));
     },
-    [saveProducts, findIndex, products],
+    [products],
   );
 
   const decrement = useCallback(
     async id => {
-      const productIndex = findIndex(id);
-      if (productIndex >= 0) {
-        const foundProduct = products[productIndex];
-
-        if (foundProduct.quantity <= 1) {
-          const list = products.splice(productIndex, 1);
-          saveProducts(list);
-        } else {
-          const productToSave = {
-            ...foundProduct,
-            quantity: foundProduct.quantity - 1,
-          };
-
-          const list = products;
-          list[productIndex] = productToSave;
-
-          saveProducts(list);
-        }
-      }
+      setProducts(
+        products
+          .map(product =>
+            product.id === id
+              ? { ...product, quantity: product.quantity - 1 }
+              : product,
+          )
+          .filter(product => product.quantity > 0),
+      );
+      await AsyncStorage.setItem('productsInCart', JSON.stringify(products));
     },
-    [saveProducts, findIndex, products],
+    [products],
   );
 
   const value = React.useMemo(

@@ -33,8 +33,8 @@ export const ProductImage = styled.Image`
 `;
 
 export const ProductTitleContainer = styled.View`
-  font-size: 16px;
   margin-left: 5px;
+  margin-right: 4px;
 `;
 
 export const ProductTitle = styled.Text`

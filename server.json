@@ -1,28 +1,52 @@
 {
   "products": [
     {
-      "id": "123",
-      "title": "Nome do produto 01",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 50
+      "id": "4962605",
+      "title": "Camiseta Mr Kitsch Logo Preta/Grafite",
+      "image_url": "https://t-static.dafiti.com.br/Mki_Bk0j8fb9CRk3QgNjaFrta3E=/fit-in/430x623/static.dafiti.com.br/p/mr-kitsch-camiseta-mr-kitsch-logo-preta%2fgrafite-6744-5062694-1-zoom.jpg",
+      "price": 39.99
     },
     {
-      "id": "1234",
-      "title": "Nome do produto 02",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 60
+      "id": "5171304",
+      "title": "Camiseta Calvin Klein Jeans Lettering Preta",
+      "image_url": "https://t-static.dafiti.com.br/6pOM9GNkqc4sk8QCJnLx_i2F748=/fit-in/430x623/static.dafiti.com.br/p/calvin-klein-jeans-camiseta-calvin-klein-jeans-lettering-preta-8731-4031715-1-zoom.jpg",
+      "price": 89.99
     },
     {
-      "id": "12345",
-      "title": "Nome do produto 03",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 70
+      "id": "4055044",
+      "title": "Camiseta Calvin Klein Jeans Estampada",
+      "image_url": "https://t-static.dafiti.com.br/8f-92xjsHUpp5OTN7nEIUEM616Q=/fit-in/430x623/static.dafiti.com.br/p/calvin-klein-jeans-camiseta-calvin-klein-jeans-estampada-branca-5376-4405504-1-zoom.jpg",
+      "price": 84.99
     },
     {
-      "id": "123456",
-      "title": "Nome do produto 04",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 80
+      "id": "4055109",
+      "title": "Camiseta Calvin Klein Jeans Faixas Branca",
+      "image_url": "https://t-static.dafiti.com.br/F33N2Ci5OHRjgjzzqD-YTUK9kcs=/fit-in/430x623/static.dafiti.com.br/p/calvin-klein-jeans-camiseta-calvin-klein-jeans-faixas-branca-2348-9015504-1-zoom.jpg",
+      "price": 99.99
+    },
+    {
+      "id": "4962821",
+      "title": "Camiseta Mr Kitsch Logo Branco/Preto",
+      "image_url": "https://t-static.dafiti.com.br/ymWEq9ELFIdXtrKKUirLcn3kiNw=/fit-in/430x623/static.dafiti.com.br/p/mr-kitsch-camiseta-mr-kitsch-logo-branco%2fpreto-2260-1282694-1-zoom.jpg",
+      "price": 34.99
+    },
+    {
+      "id": "3785237",
+      "title": "Camiseta Calvin Klein Jeans Cidades Preta",
+      "image_url": "https://t-static.dafiti.com.br/KjkdldkEJaY-iEaMPKQDAiz3ROg=/fit-in/430x623/static.dafiti.com.br/p/calvin-klein-jeans-camiseta-calvin-klein-jeans-cidades-preta-2896-7325873-1-zoom.jpg",
+      "price": 94.99
+    },
+    {
+      "id": "5504593",
+      "title": "Camiseta Corte à Fio Joss Seres Preto",
+      "image_url": "https://t-static.dafiti.com.br/ZvdlVTizV4eZSfvE3Yb4lUNHIvU=/fit-in/430x623/static.dafiti.com.br/p/joss-camiseta-corte-%c3%a0-fio-joss-seres-preto-0211-3954055-1-zoom.jpg",
+      "price": 59.90
+    },
+    {
+      "id": "5171000",
+      "title": "Camiseta Calvin Klein Jeans Lettering Branca",
+      "image_url": "https://t-static.dafiti.com.br/n0okq7IE4CtESUiq9VVU1Ltc6P4=/fit-in/430x623/static.dafiti.com.br/p/calvin-klein-jeans-camiseta-calvin-klein-jeans-lettering-branca-8690-0001715-1-zoom.jpg",
+      "price": 79.99
     }
   ]
 }
